@@ -126,9 +126,123 @@ body {
     text-align: center;
 }
 
-/*.content .row {
-	padding-top: 30px;
-}*/
+.content .afterName {
+	padding-top: 40px;
+}
+
+.content a {
+	color: #000;
+}
+
+.content .star {
+	display: inline-block;
+	width: 15px;
+    height: 15px;
+	background: url(../img/star.png) no-repeat 50% 50%;	
+	background-size: 100%;
+	cursor: pointer;
+	margin-right: 5px;
+}
+
+.content .goldstar {		
+	background: url(../img/star_orange.png) no-repeat 50% 50%;		
+	background-size: 100%;	
+}
+
+.content .evaluateHref {
+	margin-left: 15px;
+}
+
+.content .card {		
+	background-color: #fff;
+	border: 1px solid #b6b6b6;
+	padding: 20px;	
+}
+
+.content .mainCard {		
+	height: 200px;
+    line-height: 160px;
+	position: relative;
+}
+
+.content .mainCard .arrowLeft {				
+	width: 25px;
+    height: 35px;
+    position: absolute;
+    top: 49%;
+    left: -6px;
+    transform: translateY(-50%);
+    background: url('../img/arrow_left.png') no-repeat #ffc107 45% 50%;
+    background-size: 35%;
+}
+
+.content .mainCard .arrowLeft:before {
+	content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 0 6px 6px 0;
+    border-color: transparent #fc9e00 transparent transparent;
+    left: 0px;
+    bottom: -6px;	
+}
+
+.content .mainCard .arrowRight {				
+	width: 25px;
+	height: 35px;
+	position: absolute;
+	top: 49%;
+	right: -6px;
+	transform: translateY(-50%);
+	background: url('../img/arrow_right.png') no-repeat #ffc107 65% 50%;
+	background-size: 35%;
+}
+
+.content .mainCard .arrowRight:before {
+	content: "";		
+	position: absolute;
+	border-style: solid;
+	border-width: 0 0 6px 6px;
+	border-color: transparent transparent transparent #fc9e00;
+	right: 0px;
+	bottom: -6px;
+}
+
+.content .mainCard .saleStar {
+	line-height: 50px;
+	font-size: 1.5em;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 20px;
+	left: 20px;		
+	background: url('../img/sale.png') no-repeat 50% 50%;
+	background-size: 100%;
+}
+
+.content .mainCard .saleStar .percent {
+	margin-left: 16px; 
+}
+
+.content .mainCard img {
+	width: 100%;
+	vertical-align: middle;
+}
+
+.content .mainCard .saleStar {
+	line-height: 30px;
+    font-size: 1.3em;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    left: 10px;	
+	background: url('../img/sale.png') no-repeat 50% 50%;
+	background-size: 100%;
+}
+
+.content .mainCard .saleStar .percent {
+	margin-left: 9px; 
+}
 
 @media only screen and (min-width: 1030px) {
     /* For desktop: */
@@ -299,7 +413,7 @@ body {
 
 	.mainHeader .social {
 		position: absolute;
-		top: 10px;		
+		top: 8px;		
 	    right: 10px;
 	}
 
@@ -335,10 +449,102 @@ body {
 	    right: auto;
 	    transform: translate(-50%, -23%);       
 	}
+
+	.content .afterName {
+		padding-top: 50px;
+	}
+
+	.content .star {		
+		width: 10px;
+		height: 10px;		
+	}
+
+	.content .card {		
+		background-color: #fff;
+		border: 1px solid #b6b6b6;
+		padding: 20px;	
+	}
+
+	.content .mainCard {		
+		height: 420px;
+		line-height: 350px;			
+	}
+
+	.content .mainCard .arrowLeft {				
+		width: 50px;
+		height: 70px;		
+		top: 47%;
+		left: -10px;		
+		background: url('../img/arrow_left.png') no-repeat #ffc107 40% 50%;
+    	background-size: 40%;
+	}
+
+	.content .mainCard .arrowLeft:before {		
+		border-width: 0 10px 10px 0;				
+    	bottom: -10px;
+	}
+
+	.content .mainCard .arrowRight {				
+		width: 50px;
+		height: 70px;		
+		top: 47%;
+		right: -10px;		
+		background: url('../img/arrow_right.png') no-repeat #ffc107 60% 50%;
+    	background-size: 40%;
+	}
+
+	.content .mainCard .arrowRight:before {		
+		border-width: 0 0 10px 10px;    			
+    	bottom: -10px;
+	}
+
+	.content .mainCard .saleStar {
+		line-height: 50px;
+		font-size: 1.5em;
+		width: 50px;
+		height: 50px;		
+		top: 20px;
+		left: 20px;				
+	}
+
+	.content .mainCard .saleStar .percent {
+		margin-left: 16px; 
+	}
+
+	.content .mainCard img {
+		vertical-align: middle;
+	}
+
+	.content .otherProducts:not(:nth-child(2)):not(:last-child) {
+		padding: 20px 8px;
+	}
+
+	.content .otherProducts:nth-child(2) {
+		padding: 20px 8px 20px 0 ;		
+	}
+
+	.content .otherProducts:last-child {
+		padding: 20px 0 20px 8px;
+	}
+
+	.content .otherProducts .card{
+		height: 100%;
+		vertical-align: middle;
+		line-height: 80px;
+	}
+
+	.content .otherProducts img {
+		width: 100%;
+		vertical-align: middle;
+	}
 }
 
 .orange {
 	color: #ffc107;
+}
+
+.content .active {
+	border: 1px solid #ffc107;
 }
 
 .content-before a {
