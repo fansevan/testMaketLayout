@@ -8,7 +8,7 @@
 
 body {
 	background-color: #fff;
-	font: 0.9em "RobotoLight", Arial, san-serif;	
+	font: 0.9em "RobotoLight", Arial, san-serif;
 }
 
 .container {
@@ -110,8 +110,7 @@ body {
 }
 
 .content {
-	background-color: #eeeeee;
-	height: 1000px;
+	background-color: #eeeeee;	
 }
 
 .content .productname {
@@ -163,6 +162,7 @@ body {
 	height: 200px;
     line-height: 160px;
 	position: relative;
+	text-align: center;
 }
 
 .content .mainCard .arrowLeft {				
@@ -219,12 +219,9 @@ body {
 	background-size: 100%;
 }
 
-.content .mainCard .saleStar .percent {
-	margin-left: 16px; 
-}
-
 .content .mainCard img {
-	width: 100%;
+	max-height: 100%;
+	max-width: 100%;
 	vertical-align: middle;
 }
 
@@ -240,12 +237,170 @@ body {
 	background-size: 100%;
 }
 
-.content .mainCard .saleStar .percent {
-	margin-left: 9px; 
+.content .otherProducts {
+	width: 50%;
+	padding-bottom: 0;
 }
 
-@media only screen and (min-width: 1030px) {
-    /* For desktop: */
+.content .otherProducts .card{		
+	line-height: 55px;
+    text-align: center;
+    height: 100px;
+}
+
+.content .otherProducts img {
+	max-width: 100%;
+	max-height: 100%;
+	vertical-align: middle;
+}
+
+.content .otherProducts:nth-child(4),
+.content .otherProducts:nth-child(5) {
+	display: none;
+}
+
+
+.content .otherProducts:nth-child(2) {
+	padding-right: 8px;
+	padding-left: 0;		
+}
+
+.content .otherProducts:nth-child(3) {
+	padding-right: 0;
+	padding-left: 8px;
+}
+
+.mainProposal.card {
+	padding: 8px
+}
+
+.mainProposal .col-6 {
+	width: 50%;
+}
+
+.mainProposal .col-6,
+.mainProposal .col-12 {
+	padding: 5px;
+}
+
+.mainProposal .row {
+	padding-bottom: 10px;
+}
+
+.mainProposal input {
+	padding: 8px;
+    width: 100%;
+    font-family: "RobotoLight", Arial, san-serif;
+}
+
+.mainProposal del {
+	font: 1.2em "RobotoRegular", Arial, san-serif;
+	line-height: 0;
+}
+
+.mainProposal .saleBold {
+	font: 1.5em "RobotoMedium", Arial, san-serif;
+	color: #ff3c07;
+	line-height: 0;
+}
+
+.mainProposal .buttonProposal {
+	padding: 5px;
+	padding-left: 40px;
+    width: 100%;
+    border: none;
+    height: 40px;    
+    cursor: pointer;
+    line-height: 0;
+}
+
+.mainProposal .buttonBuy {
+	background: #ff3c07 url(../img/icon_pack.png) no-repeat 37% 50%;
+    background-size: 6%;
+	color: #fff;
+	font: 1.5em "RobotoMedium", Arial, san-serif;
+}
+
+.mainProposal .buttonCart {
+	background: #ffc107 url(../img/icon_cart.png) no-repeat 29% 50%;
+    background-size: 10%;	
+    font: 1.5em "RobotoRegular", Arial, san-serif;
+}
+
+.mainProposal .textEconomy {
+	font: 1.1em "RobotoRegular", Arial, san-serif;
+    line-height: 0;
+}
+
+.mainProposal .textEconomyPercent {
+	font: 1.2em "RobotoMedium", Arial, san-serif;
+	color: #ff3c07;
+	line-height: 0;
+}
+
+.mainProposal .divProposal {	
+	position: relative;
+	padding: 20px;
+	padding-left: 45px;
+	border-bottom: 1px solid #b6b6b6;
+} 
+
+.mainProposal .divProposal:last-child {
+	border: none;
+}
+
+.mainProposal .divProposal:after {
+	position: absolute;
+    content: "";
+    width: 30px;
+    height: 20px;
+    top: 15px;
+    right: 0;
+    background: url(../img/arrow_down.png) no-repeat 50% 50%;
+    background-size: 70%;
+}
+
+.mainProposal .divProposal h4 {
+	margin-bottom: 8px;
+}
+
+.mainProposal .credit h4{
+	margin: 0;
+}
+
+.mainProposal .divProposal p {
+	color: #727272;
+	font-size: 1em;
+}
+
+.mainProposal .delivery {
+	background: url(../img/icon_delivery.png) no-repeat 1% 26%;
+    background-size: 10%;
+}
+
+.mainProposal .guarantee {
+    background: url(../img/icon_guarantee.png) no-repeat 3% 25%;
+    background-size: 8%;
+}
+
+.mainProposal .credit {
+    background: url(../img/icon_credit.png) no-repeat 3% 50%;
+    background-size: 7%;
+}
+
+.mainProposal .paymentMethods {
+	background: url(../img/icon_payment.png) no-repeat 2.5% 33%;
+    background-size: 8%;
+    padding-bottom: 0;
+}
+
+.mainProposal .col-6 {
+	padding-bottom: 0;
+}
+
+/* For desktop: */
+@media only screen and (min-width: 1030px) {    
+	
 	.container {
 		width: 90%;		
 	}
@@ -466,7 +621,7 @@ body {
 	}
 
 	.content .mainCard {		
-		height: 420px;
+		height: 456px;
 		line-height: 350px;			
 	}
 
@@ -507,35 +662,32 @@ body {
 		left: 20px;				
 	}
 
-	.content .mainCard .saleStar .percent {
-		margin-left: 16px; 
-	}
+	.content .otherProducts:nth-child(4),
+	.content .otherProducts:nth-child(5) {
+		display: block;
+	}	
 
-	.content .mainCard img {
-		vertical-align: middle;
-	}
+	.content .otherProducts {
+		padding: 20px 8px;		
+	}	
 
-	.content .otherProducts:not(:nth-child(2)):not(:last-child) {
-		padding: 20px 8px;
+	.content .otherProducts:nth-child(3) {
+		padding-right: 8px;
 	}
 
 	.content .otherProducts:nth-child(2) {
-		padding: 20px 8px 20px 0 ;		
+		padding-right: 8px;
+		padding-left: 0;		
 	}
 
 	.content .otherProducts:last-child {
-		padding: 20px 0 20px 8px;
+		padding-right: 0;
+		padding-left: 8px;
 	}
 
-	.content .otherProducts .card{
-		height: 100%;
-		vertical-align: middle;
-		line-height: 80px;
-	}
-
-	.content .otherProducts img {
-		width: 100%;
-		vertical-align: middle;
+	.content .otherProducts .card{		
+		line-height: 64px;	  
+	    height: 111px;
 	}
 }
 
