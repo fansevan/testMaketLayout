@@ -109,11 +109,12 @@ body {
     line-height: 2em;
 }
 
-.content {
-	background-color: #eeeeee;	
+.mainContent {
+	background-color: #eeeeee;
+	padding-bottom: 25px;
 }
 
-.content .productname {
+.articleTitle {
     position: absolute;
     left: 3px;
     right: 3px;
@@ -125,15 +126,39 @@ body {
     text-align: center;
 }
 
-.content .afterName {
+.articleTitle:before {
+	content: "";
+	width: 0;
+	height: 0;
+	position: absolute;
+	border-style: solid;
+	border-width: 10px 0 10px 10px;
+	border-color:  transparent transparent #fc9e00 transparent; 
+	left: -10px;
+	top: -10px;
+}
+
+.articleTitle:after {
+	content: "";
+	width: 0;
+	height: 0;
+	position: absolute;
+	border-style: solid;
+	border-width: 10px 10px 10px 0;
+	border-color:  transparent transparent #fc9e00 transparent; 
+	right: -10px;
+	top: -10px;
+}
+
+.mainContent .afterName {
 	padding-top: 40px;
 }
 
-.content a {
+.mainContent a {
 	color: #000;
 }
 
-.content .star {
+.mainContent .star {
 	display: inline-block;
 	width: 15px;
     height: 15px;
@@ -143,29 +168,29 @@ body {
 	margin-right: 5px;
 }
 
-.content .goldstar {		
+.mainContent .goldstar {		
 	background: url(../img/star_orange.png) no-repeat 50% 50%;		
 	background-size: 100%;	
 }
 
-.content .evaluateHref {
+.mainContent .evaluateHref {
 	margin-left: 15px;
 }
 
-.content .card {		
+.card {		
 	background-color: #fff;
 	border: 1px solid #b6b6b6;
 	padding: 20px;	
 }
 
-.content .mainCard {		
+.mainContent .mainCard {		
 	height: 200px;
     line-height: 160px;
 	position: relative;
 	text-align: center;
 }
 
-.content .mainCard .arrowLeft {				
+.mainContent .mainCard .arrowLeft {				
 	width: 25px;
     height: 35px;
     position: absolute;
@@ -176,7 +201,7 @@ body {
     background-size: 35%;
 }
 
-.content .mainCard .arrowLeft:before {
+.mainContent .mainCard .arrowLeft:before {
 	content: "";
     position: absolute;
     border-style: solid;
@@ -186,7 +211,7 @@ body {
     bottom: -6px;	
 }
 
-.content .mainCard .arrowRight {				
+.mainContent .mainCard .arrowRight {				
 	width: 25px;
 	height: 35px;
 	position: absolute;
@@ -197,7 +222,7 @@ body {
 	background-size: 35%;
 }
 
-.content .mainCard .arrowRight:before {
+.mainContent .mainCard .arrowRight:before {
 	content: "";		
 	position: absolute;
 	border-style: solid;
@@ -207,7 +232,7 @@ body {
 	bottom: -6px;
 }
 
-.content .mainCard .saleStar {
+.mainContent .mainCard .saleStar {
 	line-height: 50px;
 	font-size: 1.5em;
 	width: 50px;
@@ -219,13 +244,13 @@ body {
 	background-size: 100%;
 }
 
-.content .mainCard img {
+.mainContent .mainCard img {
 	max-height: 100%;
 	max-width: 100%;
 	vertical-align: middle;
 }
 
-.content .mainCard .saleStar {
+.mainContent .mainCard .saleStar {
 	line-height: 30px;
     font-size: 1.3em;
     width: 30px;
@@ -237,35 +262,35 @@ body {
 	background-size: 100%;
 }
 
-.content .otherProducts {
+.mainContent .otherProducts {
 	width: 50%;
 	padding-bottom: 0;
 }
 
-.content .otherProducts .card{		
+.mainContent .otherProducts .card{		
 	line-height: 55px;
     text-align: center;
     height: 100px;
 }
 
-.content .otherProducts img {
+.mainContent .otherProducts img {
 	max-width: 100%;
 	max-height: 100%;
 	vertical-align: middle;
 }
 
-.content .otherProducts:nth-child(4),
-.content .otherProducts:nth-child(5) {
+.mainContent .otherProducts:nth-child(4),
+.mainContent .otherProducts:nth-child(5) {
 	display: none;
 }
 
 
-.content .otherProducts:nth-child(2) {
+.mainContent .otherProducts:nth-child(2) {
 	padding-right: 8px;
 	padding-left: 0;		
 }
 
-.content .otherProducts:nth-child(3) {
+.mainContent .otherProducts:nth-child(3) {
 	padding-right: 0;
 	padding-left: 8px;
 }
@@ -400,16 +425,16 @@ body {
 
 /*---Details---*/
 
-.content .desktopDetails {
+.mainContent .desktopDetails {
 	display: none;
 }
 
-.content .mobileDetails {
+.mainContent .mobileDetails {
 	display: block;
 	padding: 5px 10px;	
 }
 
-.content .mobileDetails li {
+.mainContent .mobileDetails li {
 	display: inline-block;
 	width: 100%;
     padding: 15px;   
@@ -421,52 +446,53 @@ body {
     border-top: 1px solid #b6b6b6;
 }
 
-.content .mobileDetails li.active {	
+.mainContent .mobileDetails li.active {	
 	padding-top: 10px;
 	border: none;                
     background: url(../img/arrow_up.png) no-repeat 100% 55%;
     background-size: 23px;
 }
 
-.content .mobileDetails .opinions {
+.mainContent .mobileDetails .opinions {
 	padding-bottom: 15px;
 }
 
-.content .details .description,
-.content .details .features {
+.mainContent .details .description,
+.mainContent .details .features {
 	display: none;
 }
 
-.content .details .opinions .star {
+.mainContent .details .opinions .star {
 	width: 15px;
 	height: 15px;
 	margin-top: 5px;
 }
 
-.content .details .opinions span {
+.mainContent .details .opinions span {
 	color: #7e7e7e;
 }
 
-.content .details .opinions .option {
+.mainContent .details .opinions .option {
 	margin-top: 15px;
 }
 
-.content .details .opinions .option h4 {
+.mainContent .details .opinions .option h4 {
 	font-family: "RobotoMedium", Arial, san-serif;
 	font-weight: normal;
 }
 
-.content .details .video {		
+.mainContent .details .video {		
 	margin-top: 20px;
 	position: relative;			
 }
 
-.content .details .video video {
+.mainContent .details .video video {
 	width: 100%;
 	height: auto;				
 }
 
-.content .details .playButton {
+.mainContent .details .playButton {
+	cursor: pointer;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -478,7 +504,7 @@ body {
     border-radius: 50%;
 }
 
-.content .details .playButton:after {
+.mainContent .details .playButton:after {
 	content: "";
     position: absolute;
     width: 30px;
@@ -488,6 +514,49 @@ body {
     transform: translate(-50%, -50%);
     background: url(../img/icon_play.png) no-repeat 50% 50%;	    
     background-size: 64%;
+}
+
+.mainContent .relatedProducts {
+	display: none;
+}
+
+.mobileRelatedProducts {
+	text-align: center;
+    background-color: #eee;
+    margin-top: 40px;
+    padding-top: 70px;
+    padding-bottom: 20px;
+}
+
+.mobileRelatedProducts .col-6 {
+	width: 50%;
+}
+
+.mobileRelatedProducts .card {
+	padding: 5px 0;
+}
+
+.mobileRelatedProducts img {
+	max-width: 100%;
+}
+
+.mobileRelatedProducts span {
+	display: inline-block;
+    font: 1.2em "RobotoRegular", Arial, san-serif normal;
+    padding: 5px 10px;
+    background-color: #ffc107;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.mobileRelatedProducts del {
+	color: #b6b6b6;
+}
+
+.mobileRelatedProducts .articleTitle {
+ 	left: 50%;
+    right: auto;
+    transform: translate(-50%,-80px);
 }
 
 /* For desktop: */
@@ -691,22 +760,22 @@ body {
 		font-size: 0.7em;
 	}
 
-	.content .productname {	
+	.articleTitle {	
 	    left: 50%;
 	    right: auto;
 	    transform: translate(-50%, -23%);       
 	}
 
-	.content .afterName {
+	.mainContent .afterName {
 		padding-top: 50px;
 	}
 
-	.content .star {		
+	.mainContent .star {		
 		width: 10px;
 		height: 10px;		
 	}
 
-	.content .card {		
+	.mainContent .card {		
 		background-color: #fff;
 		border: 1px solid #b6b6b6;
 		padding: 20px;	
@@ -714,12 +783,12 @@ body {
 
 	/*---MainCard---*/
 
-	.content .mainCard {		
+	.mainContent .mainCard {		
 		height: 456px;
 		line-height: 350px;			
 	}
 
-	.content .mainCard .arrowLeft {				
+	.mainContent .mainCard .arrowLeft {				
 		width: 50px;
 		height: 70px;		
 		top: 47%;
@@ -728,12 +797,12 @@ body {
     	background-size: 40%;
 	}
 
-	.content .mainCard .arrowLeft:before {		
+	.mainContent .mainCard .arrowLeft:before {		
 		border-width: 0 10px 10px 0;				
     	bottom: -10px;
 	}
 
-	.content .mainCard .arrowRight {				
+	.mainContent .mainCard .arrowRight {				
 		width: 50px;
 		height: 70px;		
 		top: 47%;
@@ -742,12 +811,12 @@ body {
     	background-size: 40%;
 	}
 
-	.content .mainCard .arrowRight:before {		
+	.mainContent .mainCard .arrowRight:before {		
 		border-width: 0 0 10px 10px;    			
     	bottom: -10px;
 	}
 
-	.content .mainCard .saleStar {
+	.mainContent .mainCard .saleStar {
 		line-height: 50px;
 		font-size: 1.5em;
 		width: 50px;
@@ -756,47 +825,59 @@ body {
 		left: 20px;				
 	}
 
+	.mainProposal .delivery {		
+		background-position: 3% 31%;
+	}
+
+	.mainProposal .guarantee {
+		background-position: 4% 33%;	    
+	}
+
+	.mainProposal .paymentMethods {
+		background-position: 4% 43%;		
+	}
+
 	/*---OtherProducts---*/
 
-	.content .otherProducts:nth-child(4),
-	.content .otherProducts:nth-child(5) {
+	.mainContent .otherProducts:nth-child(4),
+	.mainContent .otherProducts:nth-child(5) {
 		display: block;
 	}	
 
-	.content .otherProducts {
+	.mainContent .otherProducts {
 		padding: 20px 8px;		
 	}	
 
-	.content .otherProducts:nth-child(3) {
+	.mainContent .otherProducts:nth-child(3) {
 		padding-right: 8px;
 	}
 
-	.content .otherProducts:nth-child(2) {
+	.mainContent .otherProducts:nth-child(2) {
 		padding-right: 8px;
 		padding-left: 0;		
 	}
 
-	.content .otherProducts:last-child {
+	.mainContent .otherProducts:last-child {
 		padding-right: 0;
 		padding-left: 8px;
 	}
 
-	.content .otherProducts .card{		
+	.mainContent .otherProducts .card{		
 		line-height: 64px;	  
 	    height: 111px;
 	}
 
 	/*---Details---*/
 
-	.content .desktopDetails {
+	.mainContent .desktopDetails {
 		display: block;
 	}
 
-	.content .mobileDetails {
+	.mainContent .mobileDetails {
 		display: none;
 	}	
 
-	.content .desktopDetails li {
+	.mainContent .desktopDetails li {
 		display: inline-block;
 	    padding: 15px;
 	    width: auto;
@@ -805,7 +886,7 @@ body {
 	    cursor: pointer;	    
 	}
 
-	.content .desktopDetails li.active {
+	.mainContent .desktopDetails li.active {
     	border: 1px solid #b6b6b6;
 	    border-bottom: 1px solid #fff;
 	    background-color: #fff;
@@ -815,19 +896,62 @@ body {
 	    cursor: default;
 	}	
 
-	.content .details .opinions .star {
+	.mainContent .details .opinions .star {
 		width: 13px;
 		height: 13px;		
 	}		
 
-	.content .details .playButton {	    
+	.mainContent .details .playButton {	    
 	    width: 120px;
 	    height: 120px;	    
 	}
 
-	.content .details .playButton:after {		
+	.mainContent .details .playButton:after {		
 	    width: 60px;
 	    height: 60px;	    
+	}
+
+	.mobileRelatedProducts {
+		display: none;
+	}
+
+	.mainContent .relatedProducts {
+		display: block;
+	}
+
+	.mainContent .relatedProducts h3 {		
+		font: 1.4em "RobotoRegular", Arial, san-serif, normal;	
+		margin-bottom: 10px;
+	}
+
+	.mainContent .relatedProducts .card {
+		height: 300px;
+		text-align: center;
+		font-family: "RobotoRegular", Arial, san-serif;
+		margin-bottom: 20px;
+	}
+
+	.mainContent .relatedProducts h4 {		
+		font-size: 1.1em;
+		font-weight: normal;
+		margin-bottom: 10px;
+	}
+
+	.mainContent .relatedProducts span {		
+		display: inline-block;
+		padding: 5px;
+		background-color: #ffc107;
+		font-size: 1.3em;
+		margin-left: 20px;
+	}
+
+	.mainContent .relatedProducts del {		
+		color: #b6b6b6;
+		font-size: 1.1em;
+	}
+
+	.mainContent .relatedProducts img {
+		max-width: 100%;
 	}
 }
 
@@ -835,7 +959,7 @@ body {
 	color: #ffc107;
 }
 
-.content .active {
+.mainContent .active {
 	border: 1px solid #ffc107;
 }
 
@@ -860,30 +984,6 @@ body {
     left: -19px;
     top: 55%;
     transform: translateY(-50%);
-}
-
-.productname:before {
-	content: "";
-	width: 0;
-	height: 0;
-	position: absolute;
-	border-style: solid;
-	border-width: 10px 0 10px 10px;
-	border-color:  transparent transparent #fc9e00 transparent; 
-	left: -10px;
-	top: -10px;
-}
-
-.productname:after {
-	content: "";
-	width: 0;
-	height: 0;
-	position: absolute;
-	border-style: solid;
-	border-width: 10px 10px 10px 0;
-	border-color:  transparent transparent #fc9e00 transparent; 
-	right: -10px;
-	top: -10px;
 }
 
 footer {
