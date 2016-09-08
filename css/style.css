@@ -315,15 +315,15 @@ body {
 }
 
 .mainProposal .buttonBuy {
-	background: #ff3c07 url(../img/icon_pack.png) no-repeat 37% 50%;
-    background-size: 6%;
+	background: #ff3c07 url(../img/icon_pack.png) no-repeat 35% 50%;
+    background-size: 20px;
 	color: #fff;
 	font: 1.5em "RobotoMedium", Arial, san-serif;
 }
 
 .mainProposal .buttonCart {
-	background: #ffc107 url(../img/icon_cart.png) no-repeat 29% 50%;
-    background-size: 10%;	
+	background: #ffc107 url(../img/icon_cart.png) no-repeat 27% 50%;
+    background-size: 32px;	
     font: 1.5em "RobotoRegular", Arial, san-serif;
 }
 
@@ -374,28 +374,120 @@ body {
 }
 
 .mainProposal .delivery {
-	background: url(../img/icon_delivery.png) no-repeat 1% 26%;
-    background-size: 10%;
+	background: url(../img/icon_delivery.png) no-repeat 3% 26%;
+    background-size: 27px;
 }
 
 .mainProposal .guarantee {
-    background: url(../img/icon_guarantee.png) no-repeat 3% 25%;
-    background-size: 8%;
+    background: url(../img/icon_guarantee.png) no-repeat 4% 25%;
+    background-size: 25px;
 }
 
 .mainProposal .credit {
-    background: url(../img/icon_credit.png) no-repeat 3% 50%;
-    background-size: 7%;
+    background: url(../img/icon_credit.png) no-repeat 4% 50%;
+    background-size: 20px;
 }
 
 .mainProposal .paymentMethods {
-	background: url(../img/icon_payment.png) no-repeat 2.5% 33%;
-    background-size: 8%;
+	background: url(../img/icon_payment.png) no-repeat 4% 33%;
+    background-size: 22px;
     padding-bottom: 0;
 }
 
 .mainProposal .col-6 {
 	padding-bottom: 0;
+}
+
+/*---Details---*/
+
+.content .desktopDetails {
+	display: none;
+}
+
+.content .mobileDetails {
+	display: block;
+	padding: 5px 10px;	
+}
+
+.content .mobileDetails li {
+	display: inline-block;
+	width: 100%;
+    padding: 15px;   
+    padding-left: 0;
+    font: 1.1em "RobotoRegular", Arial, san-serif;     
+    cursor: pointer;
+    background: url(../img/arrow_down.png) no-repeat 100% 55%;
+    background-size: 23px;
+    border-top: 1px solid #b6b6b6;
+}
+
+.content .mobileDetails li.active {	
+	padding-top: 10px;
+	border: none;                
+    background: url(../img/arrow_up.png) no-repeat 100% 55%;
+    background-size: 23px;
+}
+
+.content .mobileDetails .opinions {
+	padding-bottom: 15px;
+}
+
+.content .details .description,
+.content .details .features {
+	display: none;
+}
+
+.content .details .opinions .star {
+	width: 15px;
+	height: 15px;
+	margin-top: 5px;
+}
+
+.content .details .opinions span {
+	color: #7e7e7e;
+}
+
+.content .details .opinions .option {
+	margin-top: 15px;
+}
+
+.content .details .opinions .option h4 {
+	font-family: "RobotoMedium", Arial, san-serif;
+	font-weight: normal;
+}
+
+.content .details .video {		
+	margin-top: 20px;
+	position: relative;			
+}
+
+.content .details .video video {
+	width: 100%;
+	height: auto;				
+}
+
+.content .details .playButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.7);	    
+    border: 1px solid #b6b6b6;
+    border-radius: 50%;
+}
+
+.content .details .playButton:after {
+	content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 54%;
+    transform: translate(-50%, -50%);
+    background: url(../img/icon_play.png) no-repeat 50% 50%;	    
+    background-size: 64%;
 }
 
 /* For desktop: */
@@ -620,6 +712,8 @@ body {
 		padding: 20px;	
 	}
 
+	/*---MainCard---*/
+
 	.content .mainCard {		
 		height: 456px;
 		line-height: 350px;			
@@ -662,6 +756,8 @@ body {
 		left: 20px;				
 	}
 
+	/*---OtherProducts---*/
+
 	.content .otherProducts:nth-child(4),
 	.content .otherProducts:nth-child(5) {
 		display: block;
@@ -688,6 +784,50 @@ body {
 	.content .otherProducts .card{		
 		line-height: 64px;	  
 	    height: 111px;
+	}
+
+	/*---Details---*/
+
+	.content .desktopDetails {
+		display: block;
+	}
+
+	.content .mobileDetails {
+		display: none;
+	}	
+
+	.content .desktopDetails li {
+		display: inline-block;
+	    padding: 15px;
+	    width: auto;
+	    text-decoration: underline;
+	    margin-bottom: -1px;
+	    cursor: pointer;	    
+	}
+
+	.content .desktopDetails li.active {
+    	border: 1px solid #b6b6b6;
+	    border-bottom: 1px solid #fff;
+	    background-color: #fff;
+	    text-decoration: none;
+	    color: #7e7e7e;
+	    font-family: "RobotoRegular", Arial, san-serif;
+	    cursor: default;
+	}	
+
+	.content .details .opinions .star {
+		width: 13px;
+		height: 13px;		
+	}		
+
+	.content .details .playButton {	    
+	    width: 120px;
+	    height: 120px;	    
+	}
+
+	.content .details .playButton:after {		
+	    width: 60px;
+	    height: 60px;	    
 	}
 }
 
