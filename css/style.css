@@ -368,6 +368,7 @@ body {
 	padding: 20px;
 	padding-left: 45px;
 	border-bottom: 1px solid #b6b6b6;
+	background-position: 10px 20px !important;
 } 
 
 .mainProposal .divProposal:last-child {
@@ -399,22 +400,22 @@ body {
 }
 
 .mainProposal .delivery {
-	background: url(../img/icon_delivery.png) no-repeat 3% 26%;
+	background: url(../img/icon_delivery.png) no-repeat;
     background-size: 27px;
 }
 
 .mainProposal .guarantee {
-    background: url(../img/icon_guarantee.png) no-repeat 4% 25%;
+    background: url(../img/icon_guarantee.png) no-repeat;
     background-size: 25px;
 }
 
 .mainProposal .credit {
-    background: url(../img/icon_credit.png) no-repeat 4% 50%;
+    background: url(../img/icon_credit.png) no-repeat;
     background-size: 20px;
 }
 
 .mainProposal .paymentMethods {
-	background: url(../img/icon_payment.png) no-repeat 4% 33%;
+	background: url(../img/icon_payment.png) no-repeat;
     background-size: 22px;
     padding-bottom: 0;
 }
@@ -892,18 +893,6 @@ body {
 		left: 20px;				
 	}
 
-	.mainProposal .delivery {		
-		background-position: 3% 31%;
-	}
-
-	.mainProposal .guarantee {
-		background-position: 4% 33%;	    
-	}
-
-	.mainProposal .paymentMethods {
-		background-position: 4% 43%;		
-	}
-
 	/*---OtherProducts---*/
 
 	.mainContent .otherProducts:nth-child(4),
@@ -1131,13 +1120,4 @@ body {
     left: -19px;
     top: 55%;
     transform: translateY(-50%);
-}
-
-footer {
-
-}
-
-.beforefoot {
-	height: 470px;	
-	background-color: #785535;
 }
